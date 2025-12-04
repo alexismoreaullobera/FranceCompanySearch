@@ -26,7 +26,10 @@ Annuaire PWA permettant de rechercher des entreprises francaises via l'API publi
 
 # 3. Aperçu
 
-- Todo
+Maquette V1 du menu :
+![Maquette Menu](./public/assets/img/Android%20Compact%20-%20Menu.png)
+![Maquette Search](./public/assets/img/Android%20Compact%20-%20Search.png)
+![Maquette Details](./public/assets/img/Android%20Compact%20-%20Details.png)
 
 # 4. Fonctionnalités :
 
