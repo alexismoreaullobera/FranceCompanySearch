@@ -65,11 +65,18 @@ npm run dev
 
 # 9. Architecture
 
-public/
 src/
-js/
-test/
-.github/
+main.js
+api/
+companiesApi.js
+mapping/
+companyMapper.js
+ui/
+domBindings.js
+render.js
+events.js
+pwa/
+swRegister.js
 
 # 10. API utilisée
 
