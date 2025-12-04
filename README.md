@@ -5,6 +5,7 @@ Annuaire PWA permettant de rechercher des entreprises francaises via l'API publi
 # 2. Badges
 
 ![CI](https://github.com/alexismoreaullobera/FranceCompanySearch/actions/workflows/ci.yml/badge.svg)
+
 ![Deployment](https://img.shields.io/badge/deployment-pending-lightgrey)
 
 <!-- ![Deployment](https://img.shields.io/badge/deployment-GitHub%20Pages-brightgreen) -->
@@ -20,6 +21,8 @@ Annuaire PWA permettant de rechercher des entreprises francaises via l'API publi
 ![Responsive](https://img.shields.io/badge/UI-responsive-lightgrey)
 
 <!--![Responsive](https://img.shields.io/badge/UI-responsive-brightgreen)-->
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 # 3. Aperçu
 
@@ -65,6 +68,9 @@ npm run dev
 
 # 9. Architecture
 
+Voici l’organisation du code source (structure simplifiée) :
+
+```
 src/
 main.js
 api/
@@ -77,6 +83,7 @@ render.js
 events.js
 pwa/
 swRegister.js
+```
 
 # 10. API utilisée
 
