@@ -4,8 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FranceCompanySearch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="manifest" href="./manifest.webmanifest">
 </head>
 <body>
-    
+    <div class="app">
+        <header class="app-header">
+            <img 
+            src="./assets/img/fcs-logo.svg" 
+            alt="Logo FranceCompanySearch" 
+            class="app-logo">
+        </header>
+        <main class="app-main">
+            <section class="search-section">
+                <form id="searchForm" class="search-form">
+                    <label for="searchInput" class="sr-only">
+                        Rechercher une entreprise
+                    </label>
+
+                    <div class="search-input-wrapper">
+                        <input 
+                            id="searchInput"
+                            name="search"
+                            type="text"
+                            placeholder="Rechercher une entreprise..."
+                            class="search-input"
+                        >
+                        <button 
+                            type="submit"
+                            class="search-button"
+                            aria-label="Lancer la recherche"
+                        >
+                            🔍
+                        </button>
+                    </div>
+                </form>
+
+                <ul 
+                    id="searchHistory"
+                    class="history-list"
+                    aria-label="Historique des recherches"
+                >
+
+                </ul>
+            </section>
+        </main>
+        <footer class="app-footer">
+            <a
+                href="https://github.com/alexismoreaullobera/FranceCompanySearch"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-icon-button"
+                aria-label="Ouvrir le dépôt GitHub"
+            >
+                <img src="./assets/img/github-mark-white.svg" alt="" aria-hidden="true">
+            </a>
+            <a
+                href="https://github.com/alexismoreaullobera/FranceCompanySearch"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-icon-button"
+                aria-label="Ouvrir le dépôt GitHub"
+            >
+                <img src="./assets/img/share-svgrepo-com.svg" alt="" aria-hidden="true">
+            </a>
+            <a
+                href="https://github.com/alexismoreaullobera/FranceCompanySearch"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-icon-button"
+                aria-label="Ouvrir le dépôt GitHub"
+            >
+                Mentions légales
+            </a>
+        </footer>
+    </div>
 </body>
 </html>
