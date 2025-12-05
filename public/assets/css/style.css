@@ -1,0 +1,46 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #4D3E9F 0%,
+    #441919 50%,
+    #331313 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.app-logo {
+    width: 40%;
+    max-width: 180px;
+    min-width: 100px;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(180deg, #4D3E9F, #D953E8);
+    -webkit-mask: url('../img/fcs-logo.svg') no-repeat center / contain; /*Chrome, Edge, Safari, Mobile browser*/
+    mask: url('../img/fcs-logo.svg') no-repeat center / contain; /*W3C spec et utilisé par Firefox, Chrome, Safari*/
+}
+
+.footer-icon-button img{
+    max-width: 15px;
+    max-height: 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
