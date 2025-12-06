@@ -71,7 +71,7 @@ npm run dev
 
 # 9. Architecture
 
-Voici l’organisation du code source (structure simplifiée) :
+Voici l’organisation du code source (structure simplifiée et évolutive) :
 
 ```
 src/
@@ -103,8 +103,20 @@ GET https://recherche-entreprises.api.gouv.fr/search?q=TERM&page=1
 ```
 npm test
 ```
+# 12. Roadmap
 
-# 12. Licence
+- [ ] Issue 1 — UI : Hero Section (page d’accueil)
+- [ ] Issue 2 — UI : Résultats de recherche (cards)
+- [ ] Issue 3 — UI : Fiche entreprise (détails)
+- [ ] Issue 4 — API : Module d’appel API + mapping des données
+- [ ] Issue 5 — Logic : Gestion de l’historique (localStorage)
+- [ ] Issue 6 — Architecture : Structure JS (ui/api/mapping/pwa)
+- [ ] Issue 7 — PWA : Manifest.json
+- [ ] Issue 8 — PWA : Service Worker (cache statique)
+- [ ] Issue 9 — CI : Pipeline GitHub Actions (tests + build)
+- [ ] Issue 10 — CD : Déploiement GitHub Pages
+
+# 13. Licence
 
 Ce projet est distribué sous la licence MIT.
 Voir le fichier LICENSE pour plus d'informations.
