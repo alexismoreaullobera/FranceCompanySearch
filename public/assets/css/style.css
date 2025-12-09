@@ -1,4 +1,13 @@
-html, body {
+:root {
+  --primary-gradient-color: #4D3E9F;
+  --second-gradient-color: #441919;
+  --third-gradient-color: #331313;
+  --first-logo-color: #4D3E9F;
+  --second-logo-color: #1C1639;
+}
+
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -6,33 +15,110 @@ html, body {
 
 .app {
   min-height: 100vh;
-  background: linear-gradient(
-    180deg,
-    #4D3E9F 0%,
-    #441919 50%,
-    #331313 100%
-  );
+  background: linear-gradient(180deg,
+      var(--primary-gradient-color) 0%,
+      var(--second-gradient-color) 49%,
+      var(--third-gradient-color) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
+}
+
+/*HEADER*/
+.app-header {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  width: 100%;
 }
 
 .app-logo {
-    width: 40%;
-    max-width: 180px;
-    min-width: 100px;
-    aspect-ratio: 1 / 1;
-    background: linear-gradient(180deg, #4D3E9F, #D953E8);
-    -webkit-mask: url('../img/fcs-logo.svg') no-repeat center / contain; /*Chrome, Edge, Safari, Mobile browser*/
-    mask: url('../img/fcs-logo.svg') no-repeat center / contain; /*W3C spec et utilisé par Firefox, Chrome, Safari*/
+  width: clamp(250px, 25vw, 400px);
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(360deg,
+      var(--first-logo-color) 0%,
+      var(--second-logo-color) 70%);
+  -webkit-mask: url('../img/fcs-logo.svg') no-repeat center / contain;
+  mask: url('../img/fcs-logo.svg') no-repeat center / contain;
+
+  filter: drop-shadow(0 0 40px red);
 }
 
-.footer-icon-button img{
-    max-width: 15px;
-    max-height: 15px;
+
+/*MAIN*/
+.app-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
+.search-input-wrapper {
+  width: clamp(300px, 1vw, 300px);
+  height: clamp(40px, 5vw, 70px);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.search-input {
+  border-radius: 30px 0px 0 30px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.search-button {
+  border-radius: 0 30px 30px 0;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/*FOOTER*/
+.app-footer {
+  flex: 0 0 auto;
+  height: clamp(40px, 5vw, 60px);
+  width: 100%;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(2px, 2vw, 10px);
+}
+
+.footer-icon-button img {
+  width: clamp(30px, 5vw, 50px);
+  height: clamp(30px, 5vw, 50px);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex: 1 0 auto;
+}
+
+button.footer-icon-button {
+  width: clamp(30px, 5vw, 50px);
+  height: clamp(30px, 5vw, 50px);
+  -webkit-mask: url('../img/share-svgrepo-com.svg') no-repeat center / contain;
+  mask: url('../img/share-svgrepo-com.svg') no-repeat center / contain;
+  background-color: #fff;
+}
+
+a.footer-icon-button {
+  color: white;
+}
+
+
+
+
+/*Accesibilité*/
 .sr-only {
   position: absolute;
   width: 1px;
