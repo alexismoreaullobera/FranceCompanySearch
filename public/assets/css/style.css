@@ -27,24 +27,29 @@ body {
 }
 
 /*HEADER*/
+
 .app-header {
-  flex: 0 0 auto;
   display: flex;
   justify-content: center;
   padding-top: 3rem;
-  width: 100%;
 }
 
 .app-logo {
-  width: clamp(250px, 25vw, 400px);
-  aspect-ratio: 1 / 1;
-  background: linear-gradient(360deg,
-      var(--first-logo-color) 0%,
-      var(--second-logo-color) 70%);
-  -webkit-mask: url('../img/fcs-logo.svg') no-repeat center / contain;
-  mask: url('../img/fcs-logo.svg') no-repeat center / contain;
+  width: clamp(200px, 32vw, 240px);
+}
 
-  filter: drop-shadow(0 0 40px red);
+/* Le SVG occupe toute la boîte + drop shadow */
+.app-logo__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+
+}
+
+/* Les paths utilisent le gradient */
+.app-logo__path {
+  fill: url(#logoGradient);
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.55));
 }
 
 
@@ -57,19 +62,42 @@ body {
   height: 100%;
 }
 
+.search-section {
+  padding-inline: 1.5rem;
+}
+
 .search-input-wrapper {
-  width: clamp(300px, 1vw, 300px);
-  height: clamp(40px, 5vw, 70px);
   display: flex;
-  justify-content: center;
-  align-content: center;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+
+  background: radial-gradient(circle at top left, #ffffff, #f5f5f8);
+  border: 1px solid rgba(7, 6, 6, 0.712);
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.596);
 }
 
 .search-input {
+  flex: 1;
+  border: none;
   border-radius: 30px 0px 0 30px;
   width: 100%;
   margin: 0;
   padding: 0;
+  background: transparent;
+
+  font-size: 0.9rem;
+  color: #333;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #9a9a9f;
 }
 
 .search-button {
@@ -77,6 +105,12 @@ body {
   background-color: #fff;
   margin: 0;
   padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.search-logo-path {
+  fill: linear-gradient(180deg, #4D3E9F 0%, #1C1639 50%);
 }
 
 
@@ -94,7 +128,7 @@ body {
   gap: clamp(2px, 2vw, 10px);
 }
 
-.footer-icon-button img {
+.footer-icon-image img {
   width: clamp(30px, 5vw, 50px);
   height: clamp(30px, 5vw, 50px);
   border: none;
@@ -103,15 +137,40 @@ body {
   flex: 1 0 auto;
 }
 
-button.footer-icon-button {
-  width: clamp(30px, 5vw, 50px);
-  height: clamp(30px, 5vw, 50px);
-  -webkit-mask: url('../img/share-svgrepo-com.svg') no-repeat center / contain;
-  mask: url('../img/share-svgrepo-com.svg') no-repeat center / contain;
-  background-color: #fff;
+.footer-icon-button {
+  border: none;
+  background: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-a.footer-icon-button {
+.footer-icon-img {
+  padding: 18%;
+  /* pour laisser du blanc autour */
+}
+
+.footer-icon-button,
+.footer-icon-img {
+  width: clamp(34px, 6vw, 46px);
+  aspect-ratio: 1 / 1;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.footer-icon--share {
+  width: 100%;
+  height: 100%;
+  -webkit-mask: url('../img/share-svgrepo-com.svg') no-repeat center / 90%;
+  mask: url('../img/share-svgrepo-com.svg') no-repeat center / 90%;
+  background-color: #fff;
+
+}
+
+
+a.footer-icon-mention {
   color: white;
 }
 
