@@ -1,0 +1,28 @@
+{
+  "name": "francecompanysearch",
+  "version": "1.0.0",
+  "description": "Annuaire PWA permettant de rechercher des entreprises francaises via l'API publique api.gouv.fr.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexismoreaullobera/FranceCompanySearch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alexismoreaullobera/FranceCompanySearch/issues"
+  },
+  "homepage": "https://github.com/alexismoreaullobera/FranceCompanySearch#readme",
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0"
+  }
+}
