@@ -9,7 +9,7 @@ yarn-error.log*
 .env.local
 .env.*.local
 
-# Build output (si un jour tu build)
+# Build output 
 dist/
 build/
 
