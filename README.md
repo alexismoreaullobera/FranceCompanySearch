@@ -4,10 +4,10 @@ Annuaire PWA permettant de rechercher des entreprises francaises via l'API publi
 
 # 2. Badges
 
-![CI](https://github.com/alexismoreaullobera/FranceCompanySearch/actions/workflows/ci.yml/badge.svg?branch=main)
+![CI](https://github.com/alexismoreaullobera/FranceCompanySearch/actions/workflows/ci.yml/badge.svg)
 
+![CD](https://github.com/alexismoreaullobera/FranceCompanySearch/actions/workflows/cd.yml/badge.svg)
 
-![Deployment](https://img.shields.io/badge/deployment-pending-lightgrey)
 
 <!-- ![Deployment](https://img.shields.io/badge/deployment-GitHub%20Pages-brightgreen) -->
 
