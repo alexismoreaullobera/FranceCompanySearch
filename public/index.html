@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,62 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="manifest" href="./manifest.webmanifest">
 </head>
+
 <body>
     <div class="app">
         <header class="app-header">
-            <div class="app-logo">
+            <div class="app-logo" aria-label="FranceCompanySearch">
+                <svg class="app-logo__svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-hidden="true">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#4D3E9F" />
+                            <stop offset="100%" stop-color="#1C1639" />
+                        </linearGradient>
+                    </defs>
+
+                    <g transform="translate(0,300) scale(0.1,-0.1)" class="app-logo__group">
+                        <path class="app-logo__path" d="M1905 2208 c-41 -5 -96 -25 -171 -63 l-112 -55 -83 19 c-244 57 -505
+                            76 -648 47 -192 -39 -314 -147 -327 -289 -4 -38 0 -61 13 -86 19 -37 53 -59
+                            38 -25 -5 11 -10 42 -12 69 -8 96 72 190 202 236 75 27 271 37 401 20 88 -11
+                            326 -52 332 -57 2 -1 -16 -20 -40 -41 -97 -85 -205 -213 -292 -345 -34 -51
+                            -67 -89 -79 -92 -12 -3 -53 -6 -91 -6 l-69 0 7 46 c3 25 19 79 36 120 34 85
+                            34 84 21 84 -18 0 -101 -128 -126 -194 -27 -71 -33 -146 -13 -146 7 0 26 13
+                            43 29 27 25 39 29 112 34 46 3 83 4 83 2 0 -10 -186 -316 -225 -370 -117 -164
+                            -277 -248 -387 -202 -45 19 -73 67 -64 110 6 28 -7 57 -24 57 -5 0 -22 -12
+                            -39 -26 -44 -37 -43 -84 2 -129 79 -79 260 -74 435 11 126 62 231 184 380 444
+                            l60 105 70 3 c47 2 74 8 83 18 19 23 4 27 -62 15 -35 -6 -65 -9 -67 -6 -16 16
+                            194 311 287 403 54 53 56 54 101 48 354 -52 412 -49 473 23 92 110 -48 217
+                            -248 189z m150 -39 c54 -15 75 -36 75 -74 0 -33 -23 -61 -69 -85 -28 -14 -58
+                            -10 -224 27 -131 30 -130 26 -37 81 95 56 176 73 255 51z m-359 -110 c9 -15
+                            -13 -28 -38 -21 -11 3 -32 -4 -48 -17 -26 -19 -63 -30 -47 -14 4 3 0 17 -9 31
+                            l-16 25 55 -7 c35 -5 57 -3 62 3 8 14 32 14 41 0z m-241 -187 c-6 -4 -14 -14
+                            -20 -23 -5 -9 -38 -59 -73 -110 -35 -51 -77 -118 -93 -148 -63 -120 -236 -394
+                            -282 -446 -73 -83 -101 -92 -45 -14 58 82 163 258 197 329 15 31 40 75 56 99
+                            49 70 148 206 154 211 4 3 28 31 55 63 27 32 51 55 55 52 3 -3 1 -9 -4 -13z" />
+                        <path class="app-logo__path" d="M2334 1970 c-55 -17 -127 -73 -158 -124 -23 -36 -31 -63 -34 -111 -6
+                            -86 15 -127 128 -254 51 -58 101 -123 111 -145 43 -96 12 -216 -81 -306 -66
+                            -64 -139 -92 -242 -92 -100 -1 -163 28 -193 87 -11 22 -21 42 -22 44 -2 2 -12
+                            -4 -23 -14 -28 -26 -25 -66 8 -97 49 -46 92 -61 184 -66 166 -8 300 42 402
+                            151 72 76 101 144 101 237 0 100 -21 140 -139 268 -102 110 -139 172 -139 233
+                            0 89 93 163 205 164 62 0 101 -21 128 -68 15 -26 15 -28 -17 -132 -12 -40 46
+                            26 63 72 22 56 11 107 -29 137 -24 17 -45 21 -125 23 -53 1 -111 -2 -128 -7z
+                            m-75 -346 c13 -16 52 -62 88 -102 89 -99 97 -110 118 -164 20 -53 17 -121 -8
+                            -180 -20 -48 -39 -59 -26 -16 16 59 10 130 -16 187 -22 46 -83 123 -179 226
+                            -29 31 -56 96 -56 136 0 55 11 54 35 -5 12 -30 32 -67 44 -82z" />
+                        <path class="app-logo__path" d="M1745 1783 c-27 -8 -73 -31 -102 -50 -171 -113 -290 -423 -218 -563
+                            51 -99 208 -130 335 -65 59 30 145 113 175 169 24 45 10 61 -18 21 -112 -155
+                            -247 -216 -328 -148 -43 36 -59 79 -59 156 0 117 62 264 153 364 69 75 114 96
+                            190 91 85 -6 101 -28 94 -125 -6 -81 5 -95 29 -37 27 64 29 125 5 155 -37 47
+                            -158 62 -256 32z m-181 -210 c-49 -116 -66 -172 -71 -247 -5 -72 -3 -87 20
+                            -138 30 -68 17 -78 -31 -24 -49 56 -51 152 -7 276 23 64 86 170 102 170 2 0
+                            -4 -17 -13 -37z" />
+                    </g>
+                </svg>
             </div>
         </header>
+
+
         <main class="app-main">
             <section class="search-section">
                 <form id="searchForm" class="search-form">
@@ -22,61 +73,40 @@
                     </label>
 
                     <div class="search-input-wrapper">
-                        <input 
-                            id="searchInput"
-                            name="search"
-                            type="text"
-                            placeholder="Rechercher une entreprise..."
-                            class="search-input"
-                        >
-                        <button 
-                            type="submit"
-                            class="search-button"
-                            aria-label="Lancer la recherche"
-                        >
-                            🔍
+                        <input id="searchInput" name="search" type="text" placeholder="Rechercher une entreprise..."
+                            class="search-input">
+
+                        <button type="submit" class="search-button" aria-label="Lancer la recherche">
+                            <svg class="search-logo-svg" xmlns="http://www.w3.org/2000/svg">
+                                <path class="search-logo-path" viewBox="0 0 483 483" d="M17.545 15.467l-3.779-3.779a6.15 6.15 0 0 0 .898-3.21c0-3.417-2.961-6.377-6.378-6.377A6.185 6.185 0 0 0 2.1 8.287c0 3.416 2.961 6.377 6.377 6.377a6.15 6.15 0 0 0 3.115-.844l3.799 3.801a.953.953 0 0 0 1.346 0l.943-.943c.371-.371.236-.84-.135-1.211zM4.004 8.287a4.282 4.282 0 0 1 4.282-4.283c2.366 0 4.474 2.107 4.474 4.474a4.284 4.284 0 0 1-4.283 4.283c-2.366-.001-4.473-2.109-4.473-4.474z" />
+                            </svg>
                         </button>
                     </div>
                 </form>
 
-                <ul 
-                    id="searchHistory"
-                    class="history-list"
-                    aria-label="Historique des recherches"
-                >
-
+                <ul id="searchHistory" class="history-list" aria-label="Historique des recherches">
                 </ul>
             </section>
         </main>
         <footer class="app-footer">
-            <a
-                href="https://github.com/alexismoreaullobera/FranceCompanySearch"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="footer-icon-button"
-                aria-label="Ouvrir le dépôt GitHub"
-            >
-                <img src="./assets/img/github-mark-white.svg" alt="" aria-hidden="true">
+            <a href="https://github.com/alexismoreaullobera/FranceCompanySearch" target="_blank"
+                rel="noopener noreferrer" class="footer-icon" aria-label="Ouvrir le dépôt GitHub">
+                <img class="footer-icon-img" src="./assets/img/github-mark-white.svg" alt="" aria-hidden="true">
             </a>
-            <button
-                type="button"
-                class="footer-icon-button"
-                aria-label="Partager l'application"
-            >
-                <img src="./assets/img/share-svgrepo-com.svg" alt="" aria-hidden="true">
+
+            <button type="button" class="footer-icon" aria-label="Partager l'application">
+                <svg class="footer-icon-share-svg" viewBox="0 0 483 483" xmlns="http://www.w3.org/2000/svg">
+                    <path class="footer-icon-share-path" d="M395.72,0c-48.204,0-87.281,39.078-87.281,87.281c0,2.036,0.164,4.03,0.309,6.029l-161.233,75.674 c-15.668-14.971-36.852-24.215-60.231-24.215c-48.204,0.001-87.282,39.079-87.282,87.282c0,48.204,39.078,87.281,87.281,87.281 c15.206,0,29.501-3.907,41.948-10.741l69.789,58.806c-3.056,8.896-4.789,18.396-4.789,28.322c0,48.204,39.078,87.281,87.281,87.281 c48.205,0,87.281-39.078,87.281-87.281s-39.077-87.281-87.281-87.281c-15.205,0-29.5,3.908-41.949,10.74l-69.788-58.805 c3.057-8.891,4.789-18.396,4.789-28.322c0-2.035-0.164-4.024-0.308-6.029l161.232-75.674c15.668,14.971,36.852,24.215,60.23,24.215 c48.203,0,87.281-39.078,87.281-87.281C482.999,39.079,443.923,0,395.72,0z" />
+                </svg>
             </button>
 
-            <a
-                href="https://github.com/alexismoreaullobera/FranceCompanySearch"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="footer-icon-button"
-                aria-label="Ouvrir le dépôt GitHub"
-            >
+            <a href="https://github.com/alexismoreaullobera/FranceCompanySearch" target="_blank"
+                rel="noopener noreferrer" class="footer-link" aria-label="Ouvrir le dépôt GitHub">
                 Mentions légales
             </a>
         </footer>
     </div>
     <script type="module" src="../src/main.js"></script>
 </body>
+
 </html>
