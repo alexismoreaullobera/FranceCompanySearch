@@ -43,8 +43,12 @@ function createCompanyCard(company) {
     </div>
   `;
 
-  card.querySelector(".company-toggle").addEventListener("click", () => {
-    card.classList.toggle("is-open");
+  card.addEventListener("click", () => {
+    // UI only aujourd’hui :
+    window.openCompanyDetails?.(company);
+
+    // “API link” demain :
+    // companiesApi.getCompanyBySiren(company.siren).then(mapper...).then(openCompanyDetails)
   });
 
   return card;

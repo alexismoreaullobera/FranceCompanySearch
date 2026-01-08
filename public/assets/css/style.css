@@ -33,6 +33,13 @@ body {
   justify-content: center;
   gap: 16px;
   height: 43vh;
+
+  will-change: transform;
+  transition: transform 220ms ease;
+}
+
+.app-header.is-hidden {
+  transform: translateY(-100%);
 }
 
 .app-logo {
@@ -349,6 +356,127 @@ body {
   font-weight: 650;
 }
 
+/*========= DETAILS =========*/
+.company-details {
+  margin: 10px 10px;
+}
+
+.details-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: inherit;
+
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+
+  position: sticky;
+  top: 10px;
+  z-index: 20;
+}
+
+.details-back:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.details-back:active {
+  transform: translateY(1px);
+}
+
+.details-back:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.45);
+  outline-offset: 2px;
+}
+
+
+.details-header {
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.details-title-row {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.details-name {
+  margin: 0;
+}
+
+.details-status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.details-status.is-active {
+  background: rgba(76, 175, 80, 0.18);
+}
+
+.details-status.is-closed {
+  background: rgba(244, 67, 54, 0.18);
+}
+
+.details-sub {
+  margin: 8px 0 0;
+  opacity: 0.85;
+}
+
+.details-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.details-sep {
+  margin: 0 8px;
+  opacity: 0.6;
+}
+
+.details-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.details-card {
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.details-kv {
+  margin: 10px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.details-kv>div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 12px;
+}
+
+.details-kv dt {
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.details-kv dd {
+  margin: 0;
+}
 
 /*========= Accesibilité =========*/
 .sr-only {

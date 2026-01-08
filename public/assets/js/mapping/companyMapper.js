@@ -4,26 +4,28 @@
  * Map un item brut de l'API vers un objet exploitable par l'UI.
  */
 export function mapCompany(raw) {
-  if (!raw || typeof raw !== "object") {
-    return null;
-  }
+  if (!raw || typeof raw !== "object") return null;
 
-  const siege = raw.siege || raw.matching_etablissements || {};
+  const siege =
+    raw.siege ??
+    (Array.isArray(raw.matching_etablissements) ? raw.matching_etablissements[0] : null) ??
+    {};
 
   return {
     siren: raw.siren ?? null,
     siret: siege.siret ?? null,
     name: raw.nom_complet || raw.nom_raison_sociale || null,
-    nafCode: siege.activite_principale || raw?.siege?.activite_principale || null,
-    nafLabel:
-      siege.activite_principale_registre_metier ||
-      raw?.siege?.activite_principale_registre_metier ||
-      null,
-    address: siege.adresse || null,
-    postalCode: siege.code_postal || null,
+
+    nafCode: siege.activite_principale ?? null,
+    nafLabel: siege.libelle_activite_principale ?? null, // si présent
+    address: siege.adresse ?? null,
+    postalCode: siege.code_postal ?? null,
+    city: siege.libelle_commune ?? siege.commune ?? null,
+
     isActive: (raw.etat_administratif || siege.etat_administratif) === "A",
   };
 }
+
 
 /**
  * Map la réponse complète de l'API de recherche.

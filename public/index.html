@@ -96,7 +96,82 @@
                 </div>
                 <div id="resultsGrid" class="results-grid" aria-live="polite"></div>
             </section>
+
+            <section id="companyDetailsSection" class="company-details" aria-label="Détails entreprise" hidden>
+                <button id="btnBackToResults" class="details-back" type="button">← Retour</button>
+
+                <header class="details-header">
+                    <div class="details-title-row">
+                        <h2 id="detailsName" class="details-name">—</h2>
+                        <span id="detailsStatus" class="details-status">—</span>
+                    </div>
+
+                    <p class="details-sub">
+                        <span class="details-mono" id="detailsSiren">—</span>
+                        <span class="details-sep">•</span>
+                        <span class="details-mono" id="detailsSiret">—</span>
+                    </p>
+                </header>
+
+                <div class="details-grid">
+                    <section class="details-card">
+                        <h3>Informations générales</h3>
+                        <dl class="details-kv">
+                            <div>
+                                <dt>Date de création</dt>
+                                <dd id="detailsCreationDate">—</dd>
+                            </div>
+                            <div>
+                                <dt>Nature juridique</dt>
+                                <dd id="detailsLegalForm">—</dd>
+                            </div>
+                        </dl>
+                    </section>
+
+                    <section class="details-card">
+                        <h3>Activité</h3>
+                        <dl class="details-kv">
+                            <div>
+                                <dt>Code NAF</dt>
+                                <dd id="detailsNafCode">—</dd>
+                            </div>
+                            <div>
+                                <dt>Libellé NAF</dt>
+                                <dd id="detailsNafLabel">—</dd>
+                            </div>
+                            <div>
+                                <dt>Secteur d’activité</dt>
+                                <dd id="detailsSector">—</dd>
+                            </div>
+                        </dl>
+                    </section>
+
+                    <section class="details-card">
+                        <h3>Adresse</h3>
+                        <dl class="details-kv">
+                            <div>
+                                <dt>Adresse complète</dt>
+                                <dd id="detailsAddress">—</dd>
+                            </div>
+                            <div>
+                                <dt>Code postal</dt>
+                                <dd id="detailsPostalCode">—</dd>
+                            </div>
+                            <div>
+                                <dt>Ville</dt>
+                                <dd id="detailsCity">—</dd>
+                            </div>
+                            <div>
+                                <dt>Département</dt>
+                                <dd id="detailsDepartment">—</dd>
+                            </div>
+                        </dl>
+                    </section>
+                </div>
+            </section>
+
         </main>
+
         <footer class="app-footer">
             <a href="https://github.com/alexismoreaullobera/FranceCompanySearch" target="_blank"
                 rel="noopener noreferrer" class="footer-icon" aria-label="Ouvrir le dépôt GitHub">
