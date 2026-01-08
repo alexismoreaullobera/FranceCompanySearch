@@ -5,10 +5,15 @@ export function renderResults(companies) {
   const grid = document.getElementById("resultsGrid");
   const count = document.getElementById("resultsCount");
 
+  if (!app || !section || !grid || !count) return;
+
   app.classList.add("ui-results");
   section.hidden = false;
 
-  count.textContent = `${companies.length} entreprise(s)`;
+  count.textContent =
+    companies.length === 0
+      ? "Aucun résultat"
+      : `${companies.length} entreprise(s)`;
 
   grid.innerHTML = "";
 
