@@ -1,4 +1,4 @@
-import { searchCompanies } from "../../src/api/companiesApi.js";
+import { searchCompanies } from "../../public/assets/js/api/companiesApi.js";
 
 describe("companiesApi", () => {
 
