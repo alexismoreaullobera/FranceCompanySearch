@@ -1,9 +1,9 @@
-import { mapCompany, mapSearchResponse } from "../../src/mapping/companyMapper.js";
+import { mapCompany, mapSearchResponse } from "../../public/assets/js/mapping/companyMapper.js";
 
 describe("companyMapper", () => {
-  
+
   test("mapCompany doit mapper un item minimal correctement", async () => {
-    
+
     // Arrange
     const raw = {
       siren: "123456789",
@@ -33,8 +33,8 @@ describe("companyMapper", () => {
     //Arrange
     const apiResponse = {
       results: [
-        {siren:"987654321", name: "CompanyTestedA"},
-        {siren:"123456789", name: "CompanyTestedB"},
+        { siren: "987654321", name: "CompanyTestedA" },
+        { siren: "123456789", name: "CompanyTestedB" },
       ],
       total_results: 2,
       page: 1,
