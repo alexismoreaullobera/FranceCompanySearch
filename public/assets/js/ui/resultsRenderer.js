@@ -38,7 +38,7 @@ function createCompanyCard(company) {
 
     <div class="company-card-body">
       <p><strong>SIRET</strong> ${company.siret}</p>
-      <p><strong>Ville</strong> ${company.city}</p>
+      <p><strong>Ville</strong> ${company.city ?? "—"}</p>
       <p><strong>NAF</strong> ${company.nafCode} – ${company.nafLabel}</p>
     </div>
   `;

@@ -29,7 +29,7 @@ export function initDetailsController() {
         department: "75",
     };
 
-    openCompanyDetails(mock);
+    //openCompanyDetails(mock);
 
     // ✅ hook “API-ready”
     window.openCompanyDetails = openCompanyDetails;

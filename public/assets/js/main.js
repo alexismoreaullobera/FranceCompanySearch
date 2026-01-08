@@ -1,21 +1,31 @@
-import { MOCK_COMPANIES } from "./ui/mockCompanies.js";
 import { renderResults } from "./ui/resultsRenderer.js";
 import { initDetailsController } from "./ui/detailsController.js";
+import { searchCompanies } from "./api/companiesApi.js";
+import { mapSearchResponse } from "./mapping/companyMapper.js";
+import { renderCompanyDetails } from "./ui/companyDetailsRenderer.js";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("searchForm");
+  const input = document.getElementById("searchInput");
 
-  if (!form) {
-    return;
-  }
+  if (!form || !input) return;
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const query = input.value.trim();
+    if (!query) return;
 
-    // plus tard : lire la vraie valeur input
-    renderResults(MOCK_COMPANIES);
+    try {
+      const mappedResponse = await searchCompanies({ query });
+      renderResults(mappedResponse.results);
+    }
+    catch (err) {
+      console.error(err);
+    }
   });
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
   initDetailsController();
