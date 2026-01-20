@@ -12,16 +12,25 @@ export function mapCompany(raw) {
     {};
 
   return {
+    // Identifiants
     siren: raw.siren ?? null,
     siret: siege.siret ?? null,
     name: raw.nom_complet || raw.nom_raison_sociale || null,
 
-    nafCode: siege.activite_principale ?? null,
-    nafLabel: siege.libelle_activite_principale ?? null, // si présent
+    // Activité
+    nafCode: siege.activite_principale ?? raw.activite_principale ?? null,
+    nafLabel: siege.libelle_activite_principale ?? null,
+    sector: raw.section_activite_principale ?? null,
+
+    // Localisation
     address: siege.adresse ?? null,
     postalCode: siege.code_postal ?? null,
     city: siege.libelle_commune ?? siege.commune ?? null,
+    department: siege.departement ?? null,
 
+    // Infos entreprise
+    creationDate: raw.date_creation ?? null,
+    legalForm: raw.nature_juridique ?? null,
     isActive: (raw.etat_administratif || siege.etat_administratif) === "A",
   };
 }
