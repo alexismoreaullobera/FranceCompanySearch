@@ -23,8 +23,13 @@ describe("companyMapper", () => {
       name: "COMPANY TESTED",
       nafCode: null,
       nafLabel: null,
+      sector: null,
       address: null,
       postalCode: null,
+      city: null,
+      department: null,
+      creationDate: null,
+      legalForm: null,
       isActive: false,
     })
   });
