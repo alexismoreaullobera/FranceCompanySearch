@@ -25,6 +25,7 @@ describe("companyMapper", () => {
       nafLabel: null,
       address: null,
       postalCode: null,
+      city: null,
       isActive: false,
     })
   });
