@@ -17,10 +17,15 @@ export function mapCompany(raw) {
     name: raw.nom_complet || raw.nom_raison_sociale || null,
 
     nafCode: siege.activite_principale ?? null,
-    nafLabel: siege.libelle_activite_principale ?? null, // si présent
+    nafLabel: siege.libelle_activite_principale ?? null,
+    sector: raw.section_activite_principale ?? null,
     address: siege.adresse ?? null,
     postalCode: siege.code_postal ?? null,
     city: siege.libelle_commune ?? siege.commune ?? null,
+    department: siege.departement ?? null,
+
+    creationDate: siege.date_creation ?? raw.date_creation ?? null,
+    legalForm: raw.nature_juridique ?? null,
 
     isActive: (raw.etat_administratif || siege.etat_administratif) === "A",
   };
