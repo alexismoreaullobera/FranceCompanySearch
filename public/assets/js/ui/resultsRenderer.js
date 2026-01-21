@@ -1,4 +1,15 @@
 // src/ui/resultsRenderer.js
+
+export function escapeHtml(str) {
+  if (str == null) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 export function renderResults(companies) {
   const app = document.querySelector(".app");
   const section = document.getElementById("resultsSection");
@@ -28,7 +39,7 @@ function createCompanyCard(company) {
 
   card.innerHTML = `
     <header class="company-card-header">
-      <h3 class="company-name">${company.name}</h3>
+      <h3 class="company-name">${escapeHtml(company.name)}</h3>
 
       <div class="company-card-actions">
         <span class="company-status ${company.isActive ? "is-active" : "is-closed"}"></span>
@@ -37,9 +48,9 @@ function createCompanyCard(company) {
     </header>
 
     <div class="company-card-body">
-      <p><strong>SIRET</strong> ${company.siret}</p>
-      <p><strong>Ville</strong> ${company.city ?? "—"}</p>
-      <p><strong>NAF</strong> ${company.nafCode} – ${company.nafLabel}</p>
+      <p><strong>SIRET</strong> ${escapeHtml(company.siret)}</p>
+      <p><strong>Ville</strong> ${escapeHtml(company.city) || "—"}</p>
+      <p><strong>NAF</strong> ${escapeHtml(company.nafCode)} – ${escapeHtml(company.nafLabel)}</p>
     </div>
   `;
 
