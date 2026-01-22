@@ -26,30 +26,49 @@ function createCompanyCard(company) {
   const card = document.createElement("article");
   card.className = "company-card";
 
-  card.innerHTML = `
-    <header class="company-card-header">
-      <h3 class="company-name">${company.name}</h3>
+  const header = document.createElement("header");
+  header.className = "company-card-header";
 
-      <div class="company-card-actions">
-        <span class="company-status ${company.isActive ? "is-active" : "is-closed"}"></span>
-        <button class="company-toggle" aria-label="Afficher les détails">⌄</button>
-      </div>
-    </header>
+  const h3 = document.createElement("h3");
+  h3.className = "company-name";
+  h3.textContent = company.name; // textContent échappe automatiquement
 
-    <div class="company-card-body">
-      <p><strong>SIRET</strong> ${company.siret}</p>
-      <p><strong>Ville</strong> ${company.city ?? "—"}</p>
-      <p><strong>NAF</strong> ${company.nafCode} – ${company.nafLabel}</p>
-    </div>
-  `;
+  const actions = document.createElement("div");
+  actions.className = "company-card-actions";
+
+  const status = document.createElement("span");
+  status.className = `company-status ${company.isActive ? "is-active" : "is-closed"}`;
+
+  const toggle = document.createElement("button");
+  toggle.className = "company-toggle";
+  toggle.setAttribute("aria-label", "Afficher les détails");
+  toggle.textContent = "⌄";
+
+  actions.append(status, toggle);
+  header.append(h3,actions);
+
+  const body = document.createElement("div");
+  body.className = "company-card-body";
+  body.append(
+  createField("SIRET", company.siret),
+  createField("Ville", company.city),
+  createField("NAF", `${company.nafCode} – ${company.nafLabel}`)
+  );
+
+  card.append(header, body);
 
   card.addEventListener("click", () => {
-    // UI only aujourd’hui :
     window.openCompanyDetails?.(company);
-
-    // “API link” demain :
-    // companiesApi.getCompanyBySiren(company.siren).then(mapper...).then(openCompanyDetails)
   });
 
   return card;
+}
+
+function createField(label, value) {
+  const p = document.createElement("p");
+  const strong = document.createElement("strong");
+
+  strong.textContent = label;
+  p.append(strong, " ", value ?? "---");
+  return p;
 }
